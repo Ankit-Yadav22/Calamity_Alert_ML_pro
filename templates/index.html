@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+
+<head>
+    <title>Visualize by TEMPLATED</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <h5 id="header">
+            <span class="avatar"><img src="{{ url_for('static', filename='images/avatar.jpg')}}" alt="" /></span>
+            <form action="/predict" method="POST">
+                <label for="text">Check Message:</label><br>
+                <input type="text" id="check" name="check" value="{{text}}"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <h1 align="center"<b>{{pred}}</b></h1>
+            <ul class="icons">
+                <li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+            </ul>
+        </header>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='assets/js/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/jquery.poptrox.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/skel.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+
+</body>
+
+</html>
